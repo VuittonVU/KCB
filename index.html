@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akinator-like Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Akinator-like Game</h1>
+            </div>
+            <nav>
+                <button class="mode-toggle" onclick="toggleMode()">Dark Mode</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Can you stump the AI?</h2>
+                        <p>Think of an animal, and let's see if I can guess it!</p>
+                        <div class="cta">
+                            <h3>Ready to play?</h3>
+                            <button class="start-btn" onclick="startGame()">Start Now</button>
+                        </div>
+                    </div>
+                    <div class="hero-img">
+                        <img src="https://via.placeholder.com/400" alt="AI character">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Akinator-like Game. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+        
+        function startGame() {
+            window.location.href = 'Page2/page2.html';
+        }        
+    </script>
+</body>
+</html>
