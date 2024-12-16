@@ -13,7 +13,11 @@
                 <h1>Animaguesr</h1>
             </div>
             <nav>
-                <button class="mode-toggle" onclick="toggleMode()">Dark Mode</button>
+                <button class="mode-toggle, button" onclick="toggleMode()">Dark Mode</button>
+                <div id="music-dropdown">
+                    <button class="button" id="menu-button">Music</button>
+                </div>
+                <button class="button" id="mute">Mute</button>
             </nav>
         </header>
 
@@ -23,13 +27,13 @@
                     <div class="hero-text">
                         <h2>Can you stump the AI?</h2>
                         <p>Think of an animal, and let's see if I can guess it!</p>
-                        <div class="cta">
+                        <div class="inner-container">
                             <h3>Ready to play?</h3>
                             <button class="start-btn" onclick="startGame()">Start Now</button>
                         </div>
                     </div>
                     <div class="hero-img">
-                        <img src="https://via.placeholder.com/400" alt="AI character">
+                        <img src="image/capybara.png" alt="AI character">
                     </div>
                 </div>
             </section>
@@ -40,6 +44,9 @@
         </footer>
     </div>
 
+    <audio id="background-music" loop></audio>
+    <audio id="click-sound" src="BGM/mouse.mp3"></audio>
+    <script src="BGM/BGM1.js"></script>
     <script>
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
