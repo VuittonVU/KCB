@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguesr</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
+
+    <div class="header">
+        <div class="back-button">
+            <button class="back-btn" onclick="goBack()">></button>
+        </div>
+        <div class="header-content">
+            <h1>Animaguesr</h1>
+            <p>Can you stump the AI?</p>
+            <button class="mode-toggle" onclick="toggleMode()">Toggle Dark Mode</button>
+        </div>
+        <div id="music-dropdown">
+            <button class="button" id="menu-button">Music</button>
+            <button class="button" id="mute">Mute</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="question-box">
+            <h2>Think of an animal!</h2>
+            <p id="question">Is it a mammal?</p>
+            <div class="answer-options">
+                <button class="btn" id="yesBtn">Yes</button>
+                <button class="btn" id="noBtn">No</button>
+            </div>
+            <div class="result" id="result-container">
+                <p id="result"></p>
+            </div>
+            <p id="total-question"></p>
+        </div>
+
+        <div class="status-box">
+            <p id="timer" class="timer">Time: 0s</p>
+        </div>
+
+        <button class="reset-btn" onclick="location.reload()">Reset Game</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Animaguesr</p>
+    </div>
+
+    <audio id="background-music" loop></audio>
+    <audio id="click-sound" src="../BGM/mouse.mp3"></audio>
+    <script src="../BGM/BGM2.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
